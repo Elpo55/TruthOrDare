@@ -3,7 +3,7 @@ name: Build Android APK
 on:
   push:
     branches:
-      - main # Remplacer par "master" si votre branche principale s'appelle master
+      - main # À remplacer par "master" si votre branche principale s'appelle master
 
 jobs:
   build:
@@ -19,14 +19,11 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Configurer Gradle
+      - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Donner les permissions d'exécution à Gradlew
-        run: chmod +x ./gradlew
-
-      - name: Compiler l'APK (Debug)
-        run: ./gradlew assembleDebug
+      - name: Compiler l'APK avec Gradle Global
+        run: gradle assembleDebug
 
       - name: Télécharger l'APK généré
         uses: actions/upload-artifact@v4

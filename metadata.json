@@ -1,0 +1,6 @@
+{
+  "name": "Action ou Vérité ?",
+  "description": "Un jeu d'ambiance drôle, hilarant et sécurisé d'Action ou Vérité pour pimenter vos soirées entre amis ! De 2 à 10 joueurs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
